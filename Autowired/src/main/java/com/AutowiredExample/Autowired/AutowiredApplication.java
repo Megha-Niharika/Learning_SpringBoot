@@ -18,7 +18,7 @@ public class AutowiredApplication {
 		
         Human h1 = context.getBean(Human.class);
 		
-		h1.show();
+		h1.show1();
 	}
 
 }
