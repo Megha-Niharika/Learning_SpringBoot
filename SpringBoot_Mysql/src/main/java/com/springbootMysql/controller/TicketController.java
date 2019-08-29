@@ -19,11 +19,16 @@ import com.springbootMysql.dao.TicketDao;
 public class TicketController {
 
 	@Autowired
-	private Ticket dao;
+	private TicketDao dao;
+	
 	@PostMapping("/bookTickets")
 	public String bookTicket(List<Ticket> tickets) {
 		
-		dao.save(tickets);
+		for(Ticket ticket: tickets) {
+		dao.save(ticket);
+		}
+		
+		//dao.saveAll(tickets);
 		
 		return "ticket booked:"+tickets.size();
 	}
