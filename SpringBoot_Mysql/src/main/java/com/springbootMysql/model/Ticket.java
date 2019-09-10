@@ -28,8 +28,8 @@ public class Ticket {
 	@GeneratedValue
 	
 private int id;
-private double amount;
-private String category;
+//private double amount;
+//private String category;
 
 
 

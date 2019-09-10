@@ -1,21 +1,24 @@
 package com.AutowiredExample.Autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 //import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Controller;
+//import org.springframework.stereotype.Controller;
 //import org.springframework.stereotype.Component;
 
 //@Configuration
-@Controller
+//@Controller
+@Component
 @Scope(value="prototype")
 public class Human {
 
 	private int  id;
 	private String Name;
 	private String Tech;
-	public int i,n=10;
+	//public int i,n=10;
 	
 	
 	//its searches by type
@@ -23,17 +26,15 @@ public class Human {
 	
 	//its searches by name
 	@Qualifier("lap1")
+	
 	private Laptop laptop;
 	
 	public Human() {
 		super();
-for(i=0;i<=n;i++)
-	{
-		System.out.println("object created" +i);
+
+		System.out.println("object created" );
 	}
 		
-	}
-	
 	public int getId() {
 		return id;
 	}
@@ -70,9 +71,5 @@ for(i=0;i<=n;i++)
 	}
 	
 	
-	public void show1()
-	{
-		System.out.println("object");
-		laptop.complier();
-	}
+	
 }

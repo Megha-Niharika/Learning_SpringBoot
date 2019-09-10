@@ -6,6 +6,8 @@ public class Contact {
 	private String name;
 	private String email;
 	private String country;
+	
+	
 	public Contact(String name, String email, String country) {
 		super();
 		this.name = name;
